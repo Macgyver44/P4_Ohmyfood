@@ -26,7 +26,7 @@
         <header>
             <nav class="navbar">
                 <div class="navbar__arrow">
-                    <a class="navbar__link" href="index.html">FLECHE RETOUR</a>
+                    <!-- <a class="navbar__link" href="index.html">FLECHE RETOUR</a> -->
                 </div>
                 <img class="navbar__logo" src="assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
             </nav>
@@ -46,127 +46,109 @@
             <button class="area-header__button">Explorer nos restaurants</button>
         </article>
 
-
-        <!--******************************************operation section****************************************-->
+        <!--******************************************operation-section****************************************-->
         <!--***************************************************************************************************-->
-        <h1 class="">
-            Fonctionnement
-        </h1>
-        <div class="search-container">
-            <div class="square_search">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <button class="search-button">Choisissez un restaurant</button>
-        </div>
-        <div class="search-container">
-            <div class="square_search">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <button class="search-button">Composez votre menu</button>
-        </div>
-        <div class="search-container">
-            <div class="square_search">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <button class="search-button">Dégustez au restaurant</button>
-        </div>
+        <section class="operation-section">
+            <h1 class="operation-section__title">
+                Fonctionnement
+            </h1>
+            <div class="operation-section__container">
+                <div class="operation-section__ring">1</div>
 
+                <button class="operation-section__button"><i class="fa-solid fa-mobile-screen-button"></i> Choisissez un
+                    restaurant</button>
+            </div>
+            <div class="operation-section__container">
+                <div class="operation-section__ring">2</div>
+                <button class="operation-section__button"><i class="fa-solid fa-bars"></i>Composez votre menu</button>
+            </div>
+            <div class="operation-section__container">
+                <div class="operation-section__ring">3</div>
+                <button class="operation-section__button"><i class="fa-solid fa-store"></i>Dégustez au
+                    restaurant</button>
+            </div>
+        </section>
 
         <!--**************************************************************Start of Main Section*********************-->
         <!--********************************************************************************************************-->
 
         <main>
-            <div class="hebergements-and-populaires">
-                <section class="hebergements" id="hebergements">
-                    <!--**********************************Title of Section Accommodations in Marseille******************-->
+            <section class="restaurant" id="restaurant">
+                <!--**********************************Title of Section restaurant***********************************-->
+                <!--************************************************************************************************-->
+
+                <div class="restaurant__title">
+                    <h2>Restaurants</h2>
+                </div>
+
+                <div class="restaurant__cards">
+                    <!--**********************************Example of map restaurant*************************************-->
                     <!--************************************************************************************************-->
+                    <a href="#">
+                        <article class="card">
+                            <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Image de la chambre d'hôtel montrant un lit">
+                            <div class="card__content">
 
-                    <div class="hebergements-title">
-                        <h2 class="section-title">Restaurants</h2>
-                    </div>
+                                <h3 class="card__title">La palette du goût</h3>
+                                <p class="card__subtitle">Ménilmontant</p>
+                                <div class="card__rating"><i class="fa-solid fa-heart"></i></div>
+                            </div>
 
+                        </article>
+                    </a>
 
+                    <a href="#">
+                        <article class="card">
+                            <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt="Image de la chambre d'hôtel montrant un lit">
+                            <div>NOUVEAU</div>
+                            <div class="card__content">
 
-                    <div class="hebergements-cards">
-                        <!--**********************************Example of map Accommodations in Marseille*******************-->
-                        <!--************************************************************************************************-->
-                        <a href="#">
-                            <article class="card">
-                                <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
-                                <div class="card-content">
-                                    <div class="card-txt">
-                                        <h3 class="card-title">La palette du goût</h3>
-                                        <p class="card-subtitle">Ménilmontant</p>
-                                    </div>
-                                    <div class="card-rating">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                                <h3 class="card__title">La note enchantée</h3>
+                                <p class="card__subtitle"> Charonne</p>
 
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
+                                <div class="card__rating">
+                                    <i class="fa-solid fa-heart"></i>
+
                                 </div>
-                            </article>
-                        </a>
+                            </div>
+                        </article>
+                    </a>
 
-                        <a href="#">
-                            <article class="card">
-                                <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
-                                <div class="card-content">
-                                    <div class="card-txt">
-                                        <h3 class="card-title">La note enchantée</h3>
-                                        <p class="card-subtitle"> Charonne</p>
-                                    </div>
-                                    <div class="card-rating">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                    <a href="#">
+                        <article class="card">
+                            <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt="Image de la chambre d'hôtel montrant un lit">
+                            <div class="card__content">
 
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
+                                <h3 class="card__title">À la française</h3>
+                                <p class="card__subtitle">Cité Rouge</p>
+
+                                <div class="card__rating">
+                                    <i class="fa-solid fa-heart"></i>
+
                                 </div>
-                            </article>
-                        </a>
+                            </div>
+                        </article>
+                    </a>
 
-                        <a href="#">
-                            <article class="card">
-                                <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
-                                <div class="card-content">
-                                    <div class="card-txt">
-                                        <h3 class="card-title">À la française</h3>
-                                        <p class="card-subtitle">Cité Rouge</p>
-                                    </div>
-                                    <div class="card-rating">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
+                    <a href="#">
+                        <article class="card">
+                            <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt="Image de la chambre d'hôtel montrant un lit">
+                            <div class="card__content">
+                                <h3 class="card__title">Le délice des sens</h3>
+                                <p class="card__subtitle">Folie-Méricourt</p>
+                                <div class="card__rating">
+                                    <i class="fa-solid fa-heart"></i>
 
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
                                 </div>
-                            </article>
-                        </a>
+                            </div>
+                        </article>
+                    </a>
 
-                        <a href="#">
-                            <article class="card">
-                                <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                    alt="Image de la chambre d'hôtel montrant un lit">
-                                <div class="card-content">
-                                    <div class="card-txt">
-                                        <h3 class="card-title">Le délice des sens</h3>
-                                        <p class="card-subtitle">Folie-Méricourt</p>
-                                    </div>
-                                    <div class="card-rating">
-                                        <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-
-                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                        <span class="sr-only">Note de 4 sur 5</span>
-                                    </div>
-                                </div>
-                            </article>
-                        </a>
-
-
+            </section>
 
 
         </main>
@@ -174,14 +156,16 @@
         <!--************************************************************************************************************************************************-->
         <footer>
             <div class="footer">
-                <article class="footer_column">
-                    <h3 class="footer-title">ohmyfood</h3>
-                    <ul class="footer_list">
-                        <li class="marge_list"><i class="fa-solid fa-info"></i><a href="#">Proposer un restaurant</a>
+                <article class="footer__column">
+                    <img class="footer__title" src="assets/images/logo/ohmyfood@2x.svg" alt="Logo footer">
+                    <ul class="footer__list">
+                        <li class="footer__element"><i class="fa-solid fa-utensils"></i><a href="#">Proposer un
+                                restaurant</a></li>
+                        <li class="footer__element"><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir
+                                partenaire</a>
                         </li>
-                        <li class="marge_list"><i class="fa-solid fa-info"></i><a href="#">Devenir partenaire</a></li>
-                        <li class="marge_list"><a href="#">Mentions légales</a></li>
-                        <li class="marge_list"><a href="#">Contact</a></li>
+                        <li class="footer__element"><a href="#">Mentions légales</a></li>
+                        <li class="footer__element"><a href="#">Contact</a></li>
                     </ul>
                 </article>
 
