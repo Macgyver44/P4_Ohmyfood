@@ -1,24 +1,21 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
-    --grey-tint-2: #D9D9D9;
-    --blue-light: #DEEBFF;
-
+    --main-color: #9356DC;
+    --secondary-color: #FF79DA;
+    --tertiaire-color: #99E2D0;
+    --footer-color: #353535;
+    --main-bg-color: #F6F6F6;
+    --grey-tint-2: #EAEAEA;
 }
 
-.fa-solid {
-    color: var(--main-color);
-}
 
 .fa-location-dot {
 
-    color: #000000
+    color: var(--main-color);
 }
 
 
@@ -47,89 +44,123 @@ a {
 }
 
 /************************ header************************/
-.header_booki0 {
+/******ceci est un .bloc BEM****************************/
+.navbar {
     display: flex;
+    flex-direction: row;
     width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/**********Ceci est un __élément du bloc BEM************/
+.navbar__arrow {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     text-align: center;
-    padding: 0px;
-    margin-bottom: 30px;
-
-    box-sizing: border-box;
-
-
+    padding: 30px 0px 30px 0px;
 }
 
-.header_booki1 {
+/**********Ceci est un __élément du bloc BEM************/
+.navbar__logo {
+    width: auto;
     display: flex;
-    width: 49%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    text-align: center;
-
-
-}
-
-
-.logo {
-    max-width: 3.81em;
+    max-width: 17em;
     height: auto;
     cursor: pointer;
-
     padding: 30px 0px 30px 0px;
-
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-
-
-
-}
-
-.nav-link {
+/**********Ceci est un __élément du bloc BEM************/
+.navbar__link {
 
     padding-top: 10px;
     margin-top: 2px;
     text-decoration: none;
     border: none;
     cursor: pointer;
-
 }
 
-.nav-link:hover {
+/**********Ceci est un --modificateur du bloc BEM************
+.navbar__link--active {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
-    margin-top: auto;
-
-
-
-}
-
-.space_bottom {
-    display: flex;
-    flex-wrap: wrap;
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
     margin-bottom: 2px;
-    font-family: Raleway;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
+    width: 104%;
+    padding-bottom: 15px;
 }
 
-.space_top {
+***********************************************************/
+/*********************START infobar*********************** */
+.infobar {
 
-    font-family: Raleway;
+    display: flex;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: stretch;
+    margin: 0px 0px 35px 0px;
+
+    color: #000;
+
+    /* Information */
+
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+
+
+/*****************************end infobar*********************** */
+
+/************************ Title H1************************/
+.area-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.area-header__title {
+    display: flex;
+
+}
+
+.area-header__paragraph {
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.area-header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 15px 16px 15px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
 
 /********** FIN header*****************/
 
@@ -164,8 +195,6 @@ nav {
     border-radius: 15px;
 }
 
-
-
 .search-button {
 
     display: flex;
@@ -181,45 +210,7 @@ nav {
     box-sizing: border-box;
     font-size: 18px;
 
-
 }
-
-
-
-
-
-/*********************START infobar*********************** */
-.info_bar {
-
-    display: flex;
-    height: 24px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    margin: 0px 0px 35px 0px;
-
-    color: #000;
-
-    /* Information */
-    font-family: Raleway;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.fa-info {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid var(--grey-tint-2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*****************************end infobar*********************** */
 
 
 
@@ -433,7 +424,7 @@ nav {
     }
 
     /************************ header************************/
-    .header_booki0 {
+    .header_ohmyfood {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -445,7 +436,7 @@ nav {
 
     }
 
-    .header_booki1 {
+    .header_arrow {
         display: flex;
         width: 49%;
         flex-direction: column;
