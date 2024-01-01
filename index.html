@@ -7,20 +7,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
+    <link rel="shortcut icon" href="assets/images/logo/ohmyfood@2x.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="SASS/MAIN/style.css">
 </head>
 
 <!--*************************************Body and Main-container*********************************************-->
 <!--********************************************************************************************************-->
 
 <body>
-    <div class="main-container">
+    <div>
         <!--********************************Header and nav***************************************************-->
         <!--************************************************************************************************-->
         <header>
@@ -90,13 +91,17 @@
                     <a href="#">
                         <article class="card">
                             <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="Image de la chambre d'hôtel montrant un lit">
+                                alt="photo assiettes plat de presentation">
+                            <p class="card__new">Nouveau</p>
                             <div class="card__content">
 
-                                <h3 class="card__title">La palette du goût</h3>
-                                <p class="card__subtitle">Ménilmontant</p>
+                                <div class="card__text">
+                                    <h3 class="card__title">La palette du goût</h3>
+                                    <p class="card__subtitle">Ménilmontant</p>
+                                </div>
                                 <div class="card__rating"><i class="fa-solid fa-heart"></i></div>
                             </div>
+
 
                         </article>
                     </a>
@@ -104,12 +109,13 @@
                     <a href="#">
                         <article class="card">
                             <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                alt="Image de la chambre d'hôtel montrant un lit">
-                            <div>NOUVEAU</div>
+                                alt="photo assiettes plat de presentation">
+                            <p class="card__new">Nouveau</p>
                             <div class="card__content">
-
-                                <h3 class="card__title">La note enchantée</h3>
-                                <p class="card__subtitle"> Charonne</p>
+                                <div class="card__text">
+                                    <h3 class="card__title">La note enchantée</h3>
+                                    <p class="card__subtitle"> Charonne</p>
+                                </div>
 
                                 <div class="card__rating">
                                     <i class="fa-solid fa-heart"></i>
@@ -122,11 +128,12 @@
                     <a href="#">
                         <article class="card">
                             <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                alt="Image de la chambre d'hôtel montrant un lit">
+                                alt="photo assiettes plat de presentation">
                             <div class="card__content">
-
-                                <h3 class="card__title">À la française</h3>
-                                <p class="card__subtitle">Cité Rouge</p>
+                                <div class="card__text">
+                                    <h3 class="card__title">À la française</h3>
+                                    <p class="card__subtitle">Cité Rouge</p>
+                                </div>
 
                                 <div class="card__rating">
                                     <i class="fa-solid fa-heart"></i>
@@ -139,14 +146,14 @@
                     <a href="#">
                         <article class="card">
                             <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="Image de la chambre d'hôtel montrant un lit">
+                                alt="photo assiettes plat de presentation">
                             <div class="card__content">
-                                <h3 class="card__title">Le délice des sens</h3>
-                                <p class="card__subtitle">Folie-Méricourt</p>
-                                <div class="card__rating">
-                                    <i class="fa-solid fa-heart"></i>
-
+                                <div class="card__text">
+                                    <h3 class="card__title">Le délice des sens</h3>
+                                    <p class="card__subtitle">Folie-Méricourt</p>
                                 </div>
+
+                                <div class="card__rating"><i class="fa-solid fa-heart"></i></div>
                             </div>
                         </article>
                     </a>
@@ -168,7 +175,7 @@
                                 partenaire</a>
                         </li>
                         <li class="footer__element"><a href="#">Mentions légales</a></li>
-                        <li class="footer__element"><a href="#">Contact</a></li>
+                        <li class="footer__element"><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
                     </ul>
                 </article>
 

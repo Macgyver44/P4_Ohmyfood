@@ -1,18 +1,36 @@
 /**************************General*********************/
 
-:root {
-    $main-color: #9356DC;
-    $secondary-color: #FF79DA;
-    $tertiaire-color: #99E2D0;
-    $footer-color: #353535;
-    $main-bg-color: #F6F6F6;
-    $grey-tint-2: #EAEAEA;
-    $Grey-Tint4: #7E7E7E;
+$main-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiaire-color: #99E2D0;
+$footer-color: #353535;
+$main-bg-color: #F6F6F6;
+$grey-tint-2: #EAEAEA;
+$Grey-Tint4: #7E7E7E;
+$textecolor: #ffffff;
+$cardcolor: #ffffff;
+
+/*********************mixins***************************/
+@mixin flex($direction: row, $justify: center, $align: center, $text: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    text-align: $text;
+}
+
+@mixin shadow {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin drop-shadow {
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    margin: 0;
+
+    @include flex;
 
     * {
         font-family: 'Roboto', sans-serif;
@@ -34,13 +52,10 @@ body {
 /************************ header************************/
 /******ceci est un .bloc BEM****************************/
 .navbar {
-    display: flex;
-    flex-direction: row;
+    @include flex;
     width: 100%;
-    text-align: center;
     box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
+
 
     /**********Ceci est un __élément du bloc BEM************/
     .navbar__link {
@@ -98,7 +113,6 @@ body {
     justify-content: center;
     gap: 10px;
     align-self: stretch;
-
     background-color: $grey-tint-2;
     font-size: 16px;
     font-weight: 700;
@@ -148,22 +162,18 @@ body {
     }
 
     .area-header__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(to top, $main-color, $secondary-color);
 
-        color: white;
+        @include flex;
+        background: linear-gradient(to top, $main-color, $secondary-color);
+        color: $textecolor;
         border: none;
         padding: 15px 16px 15px 16px;
         border-radius: 35px;
         cursor: pointer;
-        align-items: center;
         box-sizing: border-box;
         font-size: 16px;
         margin-top: 27px;
         margin-bottom: 27px;
-        text-align: center;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -213,7 +223,7 @@ body {
             background-color: $main-color;
             color: $grey-tint-2;
             border-radius: 50%;
-            border: 1px solid#F2F2F2;
+            border: 1px $textecolor;
             box-sizing: border-box;
             left: 16px;
             z-index: 1;
@@ -237,7 +247,7 @@ body {
             box-sizing: border-box;
             font-size: 18px;
             z-index: 0;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            @include shadow;
 
             .fa-mobile-screen-button {
                 color: $Grey-Tint4;
@@ -264,46 +274,52 @@ body {
 /******************************card****************************/
 
 .card {
-    background-color: rgb(255, 255, 255);
+    background-color: $cardcolor;
     border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    @include drop-shadow;
 
-    .card__img {
+
+    &>img {
         object-fit: cover;
-    }
-
-    .card__content {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding-bottom: 0px;
         width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
+        height: 7em;
+        overflow: clip;
+    }
+}
 
+
+.card__content {
+    width: 100%;
+    padding: 13px;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .card__text {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
+        align-items: start;
+
+        gap: 0px;
+        margin: 0px;
 
         .card__title {
             font-size: 18px;
-            margin-top: 10px;
-            margin-bottom: 4px;
+            margin: 0px;
         }
 
         .card__subtitle {
             margin: 0;
         }
 
-        .card__rating {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 5px;
-            margin-bottom: 10px;
-        }
-
-        .card__neutral-star {
-            color: $main-bg-color;
-        }
 
         .card__euro {
             font-weight: 700;
@@ -311,7 +327,22 @@ body {
 
     }
 
+    .card__rating {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
 
+        .card__fa-heart {
+            font-size: 30em;
+
+        }
+
+        .card__neutral-star {
+            color: $main-bg-color;
+        }
+
+    }
 }
 
 
@@ -331,14 +362,16 @@ body {
     align-self: stretch;
     flex-wrap: wrap;
 
-    .restaurant__title {
+
+
+    &__title {
 
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .restaurant__cards {
+    &__cards {
         display: flex;
         width: 100%;
         flex-direction: column;
@@ -353,16 +386,7 @@ body {
 
     }
 
-    .restaurant__cards img {
-        object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding-bottom: 0px;
-        width: 100%;
-        height: 7em;
-        overflow: clip;
 
-    }
 
 }
 
@@ -574,7 +598,7 @@ body {
     .search-button {
         border-radius: 15px 15px 15px 15px;
         font-size: 0px;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
+        @include drop-shadow;
         display: flex;
         align-items: center;
         align-content: flex-end;
@@ -664,7 +688,4 @@ body {
         flex-direction: column;
         justify-content: center;
 
-    } 
-
-
-}*******/
+    } */
