@@ -21,6 +21,11 @@ body .section-title {
   font-size: 22px;
 }
 
+/*****************keyframes***************************/
+.heart-checkbox {
+  display: none;
+}
+
 /************************ header************************/
 /******ceci est un .bloc BEM****************************/
 .navbar {
@@ -124,6 +129,7 @@ body .section-title {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(to top, #9356DC, #FF79DA);
   color: #ffffff;
   border: none;
@@ -137,6 +143,11 @@ body .section-title {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: all 250ms ease-in-out;
+}
+.area-header .area-header__button:hover {
+  filter: brightness(110%);
+  box-shadow: #949494 0px 6px 10px 0px;
 }
 
 /********** FIN header*****************/
@@ -193,7 +204,7 @@ body .section-title {
   box-sizing: border-box;
   font-size: 18px;
   z-index: 0;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .operation-section .operation-section__container .operation-section__button .fa-mobile-screen-button {
   color: #7E7E7E;
@@ -229,7 +240,7 @@ body .section-title {
   color: #008766;
   padding: 7px 9px;
   border-radius: 2px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   font-weight: 500;
 }
@@ -268,10 +279,20 @@ body .section-title {
   justify-content: center;
 }
 .card__content .card__rating .card__fa-2xl {
+  position: absolute;
   font-size: 2em;
+  display: flex;
+  align-items: center;
 }
-.card__content .card__rating .card__neutral-star {
-  color: #F6F6F6;
+.card__content .card__rating .heart--anim {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /************************Section restaurant************************/
@@ -338,244 +359,51 @@ body .section-title {
 /* Le code ci-dessous correspond à la version responsive uniquement
 */
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-/* @media (max-width: 1024px) {
-
-    /****** Hebergements And Populaires ***********
-    .hebergements-and-populaires {
-        flex-direction: column;
-        width: auto;
-    }
-
-    /************************ Hebergements ********************
-
-    .hebergements {
-        width: 100%;
-
-    }
-
-    .filter-button {
-
-        font-size: 15px;
-
-    }
-
-
-
-
-
-
-}
-
-/* Small devices (phones, less than 768px) *
-@media (max-width: 768px) {
-
-    /****** General ***********
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0px;
-    box-sizing: border-box;
+/****large devices (tablets, less/equal than 780px)******/
+@media (min-width: 780px) {
+  * body {
+    display: block;
+  }
+  * {
+    font-size: 20px;
+  }
+  .operation-section {
+    max-width: 1080px;
+    margin: auto;
+  }
+  .operation-section .operation-section__responsive {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+  .restaurant__responsive {
+    background-color: #F6F6F6;
+  }
+  .restaurant__responsive .restaurant {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+    max-width: 1080px;
+    margin: auto;
+  }
+  .footer {
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .footer .footer__column {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
-}
-
-/************************ header************************
-    .header_ohmyfood {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        padding: 0px;
-        margin-bottom: 30px;
-
-    }
-
-    .header_arrow {
-        display: flex;
-        width: 49%;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        padding: 0px;
-        margin-bottom: 30px;
-
-    }
-
-
-
-    .logo {
-        width: 61.09px;
-        height: 19px;
-        cursor: pointer;
-
-
-    }
-
-    nav {
-        display: flex;
-        flex: 1;
-        justify-content: space-around;
-        padding: 0px;
-        width: 100%;
-        font-size: large;
-
-
-    }
-
-    .nav-link {
-
-        border-top: none;
-        border-bottom: 2px solid $grey-tint-2;
-        margin-bottom: 2px;
-        width: 104%;
-        padding-bottom: 15px;
-    }
-
-    .nav-link:hover {
-        color: #0065FC;
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-        margin-bottom: 2px;
-        width: 104%;
-        padding-bottom: 15px;
-
-
-    }
-
-    .space_bottom {
-        display: flex;
-
-
-
-    }
-    /********** END header*****************
-
-    /********START search zone************
-
-
-    .search-container {
-        display: flex;
-        max-width: 100%;
-        margin: 35px 0px 35px 0px;
-
-        justify-content: space-between;
-        align-items: center;
-        box-sizing: border-box;
-        display: flex;
-
-
-    }
-
-    .search-button::before {
-
-        content: "\f002";
-
-        font-family: 'Font Awesome 6 Free';
-        font-size: 24px;
-
-        color: #ffffff;
-
-        display: flex;
-        align-items: flex-end;
-        align-content: flex-end;
-
-
-    }
-
-    .search-button {
-        border-radius: 15px 15px 15px 15px;
-        font-size: 0px;
-        @include drop-shadow;
-        display: flex;
-        align-items: center;
-        align-content: flex-end;
-    }
-
-    /*****************START Filters***************
-
-    .filter-button {
-        flex: 1;
-        background-color: white;
-        display: flex;
-        height: 50px;
-        width: auto;
-        padding: 4px 19px;
-        align-items: center;
-        gap: 15px;
-        border-radius: 25px;
-        border: 2px solid $grey-tint-2;
-        cursor: pointer;
-
-        color: var(--Black, #000);
-        font-family: Raleway;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-
-    /****** Hebergements ***********
-    .hebergements {
-        order: 2;
-
-    }
-
-    #hebergements {
-        background-color: transparent;
-    }
-
-    .hebergements-and-populaires section {
-
-        border-radius: 0;
-        padding: 20px;
-        box-sizing: border-box;
-        gap: 30px;
-        flex-shrink: 3;
-    }
-
-    .hebergements-and-populaires .partie-avec-background {
-        flex: 1;
-        background-color: $main-bg-color;
-    }
-
-
-    .hebergements-cards {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-self: stretch;
-        justify-content: space-around;
-        align-content: stretch;
-        align-items: stretch;
-        align-self: stretch;
-        flex-wrap: wrap;
-        gap: 35px;
-
-
-    }
-
-    .hebergements-cards img {
-        object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        padding-bottom: 0px;
-        width: 100%;
-        height: 7em;
-
-    }
-
-
-
-
-    .footer {
-        background-color: #f0f0f0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    } *//*# sourceMappingURL=style.css.map */
+    align-items: center;
+    gap: 90px;
+  }
+  .footer .footer__column .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
