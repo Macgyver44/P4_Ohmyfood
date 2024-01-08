@@ -22,10 +22,6 @@ body .section-title {
 }
 
 /*****************keyframes***************************/
-.heart-checkbox {
-  display: none;
-}
-
 /************************ header************************/
 /******ceci est un .bloc BEM****************************/
 .navbar {
@@ -215,6 +211,10 @@ body .section-title {
 .operation-section .operation-section__container .operation-section__button .fa-store {
   color: #9356DC;
 }
+.operation-section .operation-section__container .operation-section__button:hover {
+  filter: brightness(110%);
+  box-shadow: #949494 0px 6px 10px 0px;
+}
 
 /******************************card****************************/
 .card {
@@ -231,6 +231,10 @@ body .section-title {
   width: 100%;
   height: 231px;
   overflow: clip;
+}
+.card:hover {
+  filter: brightness(102%);
+  box-shadow: #949494 0px 6px 10px 0px;
 }
 .card .card__new {
   position: absolute;
@@ -274,25 +278,75 @@ body .section-title {
 }
 .card__content .card__rating {
   display: flex;
+  flex-direction: row;
   align-items: center;
   align-content: center;
   justify-content: center;
 }
-.card__content .card__rating .card__fa-2xl {
-  position: absolute;
-  font-size: 2em;
+.card__content .card__rating .heart-label {
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 4;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
-.card__content .card__rating .heart--anim {
+.card__content .card__rating .heart-label .fa-heart {
+  display: block;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
+}
+.card__content .card__rating .heart-label .heart--regular {
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  position: absolute;
+  transform-origin: center bottom;
+  transition: opacity 600ms;
+  opacity: 1;
+  z-index: 1;
+}
+.card__content .card__rating .heart-label .heart--solid {
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  z-index: 4;
+  line-height: 1;
+  font-size: 2em;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  transition: opacity 1000ms;
+  opacity: 0;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card__content .card__rating .hidenn {
+  display: none;
+}
+.card__content .card__rating input:checked + label .heart--regular {
+  opacity: 0;
+}
+.card__content .card__rating input:checked + label .heart--solid {
+  opacity: 1;
+  animation: fill-in 1000ms ease-in forwards;
+  animation: bounce 0.7s alternate infinite cubic-bezier(0, 0.65, 0.85, 0.53);
+  animation-play-state: 1;
+  animation-iteration-count: 2;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateX(-7%) rotateX(15deg);
+  }
+  to {
+    transform: translateY(-20px);
+  }
 }
 
 /************************Section restaurant************************/
