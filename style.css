@@ -413,7 +413,7 @@ body .section-title {
 */
 /****** Media queries ***********/
 /****large devices (tablets, less/equal than 780px)******/
-@media (min-width: 780px) {
+@media (min-width: 1100px) {
   * body {
     display: block;
   }
