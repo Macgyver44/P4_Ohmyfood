@@ -80,7 +80,7 @@ body .section-title {
   height: 50px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 17px;
   align-self: stretch;
   background-color: #EAEAEA;
   font-size: 16px;
@@ -102,13 +102,13 @@ body .section-title {
 }
 .area-header .area-header__title {
   display: flex;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   align-items: center;
   align-content: center;
   justify-content: center;
   text-align: center;
-  margin: 5px;
+  margin: 30px;
 }
 .area-header .area-header__paragraph {
   color: #353535;
@@ -135,7 +135,7 @@ body .section-title {
   box-sizing: border-box;
   font-size: 16px;
   margin-top: 27px;
-  margin-bottom: 27px;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -151,11 +151,13 @@ body .section-title {
 .operation-section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .operation-section .operation-section__title {
   display: flex;
   justify-content: flex-start;
+  margin-left: 13px;
 }
 .operation-section .operation-section__container {
   position: relative;
@@ -187,7 +189,7 @@ body .section-title {
 .operation-section .operation-section__container .operation-section__button {
   position: relative;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   height: 100%;
   background-color: #F6F6F6;
@@ -324,9 +326,6 @@ body .section-title {
   -moz-text-fill-color: transparent;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-.card__content .card__rating .hidenn {
-  display: none;
-}
 .card__content .card__rating input:checked + label .heart--regular {
   opacity: 0;
 }
@@ -424,6 +423,8 @@ body .section-title {
   .operation-section {
     max-width: 1080px;
     margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
   .operation-section .operation-section__responsive {
     flex-direction: row;
@@ -442,9 +443,26 @@ body .section-title {
     max-width: 1080px;
     margin: auto;
   }
+  .restaurant__responsive .restaurant__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant__responsive .restaurant__cards {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    align-self: stretch;
+    justify-content: center;
+  }
   .footer {
     align-items: center;
     justify-content: flex-end;
+    padding: 30px 25px 30px 25px;
   }
   .footer .footer__column {
     display: flex;
