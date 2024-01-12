@@ -456,7 +456,7 @@ body {
 
         }
 
-        .hidenn {}
+        .hiden {}
 
         input:checked+label .heart--regular {
 
@@ -480,8 +480,6 @@ body {
                 from {
                     transform: translateY(0);
                 }
-
-
 
                 80% {
                     transform: translateX(-7%) rotateX(15deg);

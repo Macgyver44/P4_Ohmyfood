@@ -1,0 +1,43 @@
+/************************Section restaurant************************/
+
+.restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: $main-bg-color;
+
+    padding: 30px;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 100%;
+    align-self: stretch;
+    flex-wrap: wrap;
+
+
+
+    &__title {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__cards {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-self: stretch;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 18px;
+        column-gap: 18px;
+
+
+
+    }
+
+
+
+}

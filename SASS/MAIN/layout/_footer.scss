@@ -1,0 +1,38 @@
+/***********FOOTER*********************/
+.footer {
+    background-color: $footer-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .footer__column {
+        color: $main-bg-color;
+
+        .footer__title {
+            filter: brightness(100);
+            height: 27px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .footer__list {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+
+            .footer__element {
+                display: flex;
+                padding: 5px;
+                gap: 10px;
+            }
+
+
+        }
+    }
+
+
+}

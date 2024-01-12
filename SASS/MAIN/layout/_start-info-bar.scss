@@ -1,0 +1,20 @@
+/*********************START infobar*********************** */
+.infobar {
+
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    align-self: stretch;
+    background-color: $grey-tint-2;
+    font-size: 16px;
+    font-weight: 700;
+
+    .fa-location-dot {
+
+        color: $footer-color;
+    }
+
+
+}
