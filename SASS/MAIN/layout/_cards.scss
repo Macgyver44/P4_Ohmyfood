@@ -1,9 +1,11 @@
 /******************************card****************************/
 
 .card {
+
     background-color: $cardcolor;
     border-radius: 20px;
     @include drop-shadow;
+
 
 
 
@@ -45,9 +47,6 @@
 .card__content {
     width: 100%;
     padding: 13px;
-
-
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -139,7 +138,7 @@
 
         }
 
-        .hiden {
+        .heart-checkbox {
             display: none;
         }
 
@@ -165,8 +164,6 @@
                 from {
                     transform: translateY(0);
                 }
-
-
 
                 80% {
                     transform: translateX(-7%) rotateX(15deg);
