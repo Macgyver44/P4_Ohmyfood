@@ -1,0 +1,204 @@
+* {
+    font-family: "roboto", "shrikhand";
+}
+
+
+.background__img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+
+.menu {
+    border-radius: 30px 30px 0 0;
+    background-color: $main-bg-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: -50px 0 0 0;
+    padding: 50px 50px;
+
+    .menu__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        letter-spacing: 1px;
+        gap: 40px;
+
+        .heart-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 4;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+
+            .fa-heart {
+                display: block;
+                position: absolute;
+            }
+
+
+
+            .heart--regular {
+                display: flex;
+                flex-direction: row;
+                font-size: 2em;
+                position: absolute;
+                transform-origin: center bottom;
+                transition: opacity 600ms;
+                opacity: 1;
+                z-index: 1;
+
+            }
+
+            .heart--solid {
+                display: flex;
+                flex-direction: row;
+                font-size: 2em;
+                z-index: 4;
+                line-height: 1;
+                font-size: 2em;
+                background-image: linear-gradient(to top, $main-color, $secondary-color);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: opacity 1000ms;
+                opacity: 0;
+                -moz-background-clip: text;
+                -moz-text-fill-color: transparent;
+                @include drop-shadow;
+            }
+
+
+        }
+
+        .heart-checkbox {
+            display: none;
+        }
+
+        input:checked+label .heart--regular {
+
+            opacity: 0;
+        }
+
+        input:checked+label .heart--solid {
+
+            opacity: 1;
+
+            animation: fill-in 1000ms ease-in forwards;
+            animation: bounce 0.7s alternate infinite cubic-bezier(0, .65, .85, .53);
+            animation-play-state: random($limit: 1);
+
+
+            animation-iteration-count: 2;
+
+
+
+            @keyframes bounce {
+                from {
+                    transform: translateY(0);
+                }
+
+                80% {
+                    transform: translateX(-7%) rotateX(15deg);
+                }
+
+                to {
+                    transform: translateY(-20px);
+                }
+            }
+        }
+    }
+}
+
+.menu__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .menu__subtitle {
+        font-size: 16px;
+        font-weight: 300;
+        height: 27px;
+        position: relative;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .menucard {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $cardcolor ;
+            height: 70px;
+            border-radius: 15px;
+            padding: 0 15px;
+            @include drop-shadow;
+
+
+
+            .menucard__content {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 5px;
+                overflow: hidden;
+                white-space: nowrap;
+
+                .menucard__content__title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+
+                .menucard__content__subtitle {
+                    font-size: 15px;
+                    font-weight: 300;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+            }
+
+            .menucard__price {
+                display: flex;
+                align-self: flex-end;
+                padding-bottom: 15px;
+                font-weight: 700;
+                font-size: 15px;
+                transition: margin 800ms ease-in-out;
+            }
+
+            .menucard__check {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 70px;
+                width: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $tertiaire-color;
+                color: $cardcolor;
+                transition: transform 800ms ease-in-out;
+            }
+
+
+        }
+    }
+}
