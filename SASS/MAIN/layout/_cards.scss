@@ -154,25 +154,9 @@
             animation: fill-in 1000ms ease-in forwards;
             animation: bounce 0.7s alternate infinite cubic-bezier(0, .65, .85, .53);
             animation-play-state: random($limit: 1);
-
-
             animation-iteration-count: 2;
 
 
-
-            @keyframes bounce {
-                from {
-                    transform: translateY(0);
-                }
-
-                80% {
-                    transform: translateX(-7%) rotateX(15deg);
-                }
-
-                to {
-                    transform: translateY(-20px);
-                }
-            }
         }
     }
 }

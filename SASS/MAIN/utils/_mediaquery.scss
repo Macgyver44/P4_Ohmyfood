@@ -7,9 +7,6 @@
         display: block;
     }
 
-    * {
-        font-size: 20px;
-    }
 
     .operation-section {
 
@@ -64,7 +61,17 @@
 
         }
     }
+
+    .menu {
+        max-width: 1055px;
+        margin: -50px auto 0 auto;
+        padding: 50px 150px;
+        box-sizing: border-box;
+    }
+
+
 }
+
 
 /****large devices (, less/equal than 1100px)******/
 
@@ -77,11 +84,7 @@
         display: block;
     }
 
-    * {
-        font-size: 20px;
 
-
-    }
 
 
 

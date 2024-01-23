@@ -1,1 +1,37 @@
 /*****************keyframes***************************/
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateX(-7%) rotateX(15deg);
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+
+@keyframes crescendo {
+    0% {
+
+        opacity: 0;
+        transform: translateY(100%);
+
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+
+}
