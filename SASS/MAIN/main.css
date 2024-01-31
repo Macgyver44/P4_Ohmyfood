@@ -289,7 +289,7 @@ body .section-title {
   font-weight: bold;
   align-items: center;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   z-index: 0;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -604,6 +604,9 @@ body .section-title {
 .menu__body .menu__list .menucard--C {
   animation-delay: 900ms;
 }
+.menu__body .menu__list .menucard--D {
+  animation-delay: 1200ms;
+}
 
 .order__button {
   display: flex;
@@ -736,9 +739,7 @@ body .section-title {
     margin: 0 auto;
   }
   .restaurant__responsive .restaurant__title {
-    font-size: 24px;
     margin-top: 0px;
-    padding-bottom: 28px;
   }
   .restaurant__responsive .restaurant__cards {
     display: grid;
@@ -779,9 +780,7 @@ body .section-title {
     margin: 0 auto;
   }
   .restaurant__responsive .restaurant__title {
-    font-size: 24px;
     margin-top: 0px;
-    padding-bottom: 28px;
   }
   .restaurant__responsive .restaurant__cards {
     display: grid;
