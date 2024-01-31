@@ -124,10 +124,6 @@
         font-weight: 200;
         height: 27px;
         position: relative;
-
-
-
-
     }
 
     .menu__subtitle::after {
@@ -168,13 +164,12 @@
             animation: crescendo 800ms linear both;
             opacity: 0;
 
+
             .hidden {
                 display: none;
             }
 
-            input:checked .menucard__check {
-                transform: translateX(-70px);
-            }
+
 
 
             .menucard__content {
@@ -207,6 +202,8 @@
 
             }
 
+
+
             .menucard__price {
                 display: flex;
                 align-self: flex-end;
@@ -215,6 +212,8 @@
                 font-size: 15px;
                 transition: margin 800ms ease-in-out;
             }
+
+
 
             .menucard__check {
                 position: absolute;
@@ -230,17 +229,39 @@
                 transition: transform 800ms ease-in-out;
 
 
-
                 .fa-check-circle {
                     transition: transform 1s ease-in-out;
                     animation: spinningOut 1s ease-out;
                 }
+
+
+
+
+
+
             }
 
         }
 
 
+        //*************Input check***********************************//
 
+        .menucard input:checked~.menucard__check {
+            transform: translateX(-70px);
+        }
+
+        //************price checked***********************************//
+        .menucard input:checked~.menucard__price {
+            margin-right: 70px;
+        }
+
+        //**********************rotation check**************************//
+        .menucard input:checked~.menucard__check .fa-check-circle {
+            animation: spinningIn 700ms 200ms both ease-in;
+        }
+
+
+        //******************fin input check**************************//
 
         .menucard--A {
             animation-delay: 300ms;

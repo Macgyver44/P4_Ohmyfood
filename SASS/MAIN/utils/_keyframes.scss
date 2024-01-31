@@ -1,5 +1,46 @@
 /*****************keyframes***************************/
 
+
+//*************checked**************//
+@keyframes spinningIn {
+    0% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+
+    25% {
+        transform: rotate(180deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+//*************unchecked**************//
+@keyframes spinningOut {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: rotate(180deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+//*************heart**************//
+
 @keyframes bounce {
     from {
         transform: translateY(0);
@@ -14,7 +55,7 @@
     }
 }
 
-
+//***************card***************//
 @keyframes crescendo {
     0% {
 
@@ -34,4 +75,45 @@
     }
 
 
+}
+
+/*****************loader***************************/
+@keyframes spin {
+
+
+    to {
+        transform: rotate(360deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    from {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hideLoader {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

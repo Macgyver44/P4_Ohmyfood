@@ -15,7 +15,11 @@ $lightening: 4%;
 body {
     margin: 0;
 
-    @include flex;
+    padding: 0;
+    min-width: 300px;
+    box-sizing: border-box;
+
+
 
     * {
         font-family: 'Roboto', sans-serif;

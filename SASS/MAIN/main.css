@@ -3,10 +3,9 @@
 /**************************General*********************/
 body {
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  min-width: 300px;
+  box-sizing: border-box;
 }
 body * {
   font-family: "Roboto", sans-serif;
@@ -18,6 +17,34 @@ body a {
 body .section-title {
   margin: 0;
   font-size: 22px;
+}
+
+.container__loader {
+  position: fixed;
+  font-family: sans-serif;
+  font-size: 50px;
+  gap: 20px;
+  color: #9356DC;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hideLoader 2s ease-in-out forwards;
+}
+.container__loader .loader-quart {
+  display: inline-block;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  border-top-color: #9356DC;
+  animation: spin 2s linear infinite;
 }
 
 /************************ header************************/
@@ -514,9 +541,6 @@ body .section-title {
 .menu__body .menu__list .menucard .hidden {
   display: none;
 }
-.menu__body .menu__list .menucard input:checked .menucard__check {
-  transform: translateX(-70px);
-}
 .menu__body .menu__list .menucard .menucard__content {
   display: flex;
   flex-flow: column nowrap;
@@ -562,6 +586,15 @@ body .section-title {
   transition: transform 1s ease-in-out;
   animation: spinningOut 1s ease-out;
 }
+.menu__body .menu__list .menucard input:checked ~ .menucard__check {
+  transform: translateX(-70px);
+}
+.menu__body .menu__list .menucard input:checked ~ .menucard__price {
+  margin-right: 70px;
+}
+.menu__body .menu__list .menucard input:checked ~ .menucard__check .fa-check-circle {
+  animation: spinningIn 700ms 200ms both ease-in;
+}
 .menu__body .menu__list .menucard--A {
   animation-delay: 300ms;
 }
@@ -595,6 +628,34 @@ body .section-title {
 }
 
 /*****************keyframes***************************/
+@keyframes spinningIn {
+  0% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes spinningOut {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 @keyframes bounce {
   from {
     transform: translateY(0);
@@ -618,6 +679,37 @@ body .section-title {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+/*****************loader***************************/
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  from {
+    transform: rotate(0deg);
+  }
+}
+@keyframes hideLoader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 /****** Media queries ***********/
