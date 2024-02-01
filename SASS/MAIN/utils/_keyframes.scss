@@ -1,6 +1,29 @@
 /*****************keyframes***************************/
 
 
+/*****************patience***************************/
+@keyframes vibrateText {
+
+
+
+    20% {
+        transform: translateX(-1px) rotate(-1deg);
+    }
+
+    40% {
+        transform: translateX(1px) rotate(1deg);
+    }
+
+    60% {
+        transform: translateX(-1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translateX(1px) rotate(2deg);
+    }
+}
+
+
 //*************checked**************//
 @keyframes spinningIn {
     0% {

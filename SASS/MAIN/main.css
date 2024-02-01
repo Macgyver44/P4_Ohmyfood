@@ -99,10 +99,6 @@ body .section-title {
   height: 231px;
   overflow: clip;
 }
-.card:hover {
-  filter: brightness(102%);
-  box-shadow: #949494 0px 6px 10px 0px;
-}
 .card .card__new {
   position: absolute;
   top: 8px;
@@ -132,10 +128,16 @@ body .section-title {
   align-items: start;
   gap: 0px;
   margin: 0px;
+  animation: vibrateText 1s infinite;
+  cursor: pointer;
 }
 .card__content .card__text .card__title {
   font-size: 18px;
   margin: 0px;
+}
+.card__content .card__text:hover {
+  color: #353535;
+  animation: normalText 1s infinite;
 }
 .card__content .card__text .card__subtitle {
   margin: 0;
@@ -631,6 +633,21 @@ body .section-title {
 }
 
 /*****************keyframes***************************/
+/*****************patience***************************/
+@keyframes vibrateText {
+  20% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(1px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-1px) rotate(-1deg);
+  }
+  80% {
+    transform: translateX(1px) rotate(2deg);
+  }
+}
 @keyframes spinningIn {
   0% {
     transform: rotate(360deg);

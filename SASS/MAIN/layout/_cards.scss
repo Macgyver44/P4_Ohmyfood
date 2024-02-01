@@ -19,12 +19,7 @@
         overflow: clip;
     }
 
-    &:hover {
-        filter: brightness(102%);
-        box-shadow: darken(#adadad, 10%) 0px 6px 10px 0px;
 
-
-    }
 
     .card__new {
         position: absolute;
@@ -62,9 +57,26 @@
         gap: 0px;
         margin: 0px;
 
+
+        animation: vibrateText 1s infinite;
+        cursor: pointer;
+
+
+
+
+
+
+
+
         .card__title {
             font-size: 18px;
             margin: 0px;
+
+        }
+
+        &:hover {
+            color: $footer-color;
+            animation: normalText 1s infinite;
         }
 
         .card__subtitle {
