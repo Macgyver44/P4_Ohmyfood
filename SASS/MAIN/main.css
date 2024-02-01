@@ -184,13 +184,11 @@ body .section-title {
   line-height: 1;
   font-size: 2em;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   transition: opacity 1000ms;
   opacity: 0;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .card__content .card__rating .heart-checkbox {
@@ -203,7 +201,6 @@ body .section-title {
   opacity: 1;
   animation: fill-in 1000ms ease-in forwards;
   animation: bounce 0.7s alternate infinite cubic-bezier(0, 0.65, 0.85, 0.53);
-  animation-play-state: 1;
   animation-iteration-count: 2;
 }
 
@@ -475,13 +472,11 @@ body .section-title {
   line-height: 1;
   font-size: 2em;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   transition: opacity 1000ms;
   opacity: 0;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .menu .menu__title .heart-checkbox {
@@ -494,7 +489,6 @@ body .section-title {
   opacity: 1;
   animation: fill-in 1000ms ease-in forwards;
   animation: bounce 0.7s alternate infinite cubic-bezier(0, 0.65, 0.85, 0.53);
-  animation-play-state: 1;
   animation-iteration-count: 2;
 }
 

@@ -138,12 +138,11 @@
                 font-size: 2em;
                 background-image: linear-gradient(to top, $main-color, $secondary-color);
                 background-clip: text;
-                -webkit-background-clip: text;
+
                 color: transparent;
                 transition: opacity 1000ms;
                 opacity: 0;
-                -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
+
                 @include drop-shadow;
             }
 
@@ -165,7 +164,7 @@
 
             animation: fill-in 1000ms ease-in forwards;
             animation: bounce 0.7s alternate infinite cubic-bezier(0, .65, .85, .53);
-            animation-play-state: random($limit: 1);
+
             animation-iteration-count: 2;
 
 
